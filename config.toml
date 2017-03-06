@@ -1,86 +1,133 @@
-languageCode = "en-us"
+baseurl = "https://zhoumingjun.github.io"
 title = "zhoumingjun's blog"
-baseURL = "https://zhoumingjun.github.io"
-theme = "hugo-bootstrap-premium"
+copyright = "&copy; 2017 zhoumingjun"
+theme = "hugo-academic"
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+
+# Enable comments by entering your Disqus shortname
 disqusShortname = "zhoumingjun"
 
-[permalinks]
-    post = "/:year/:month/:day/:slug/"
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
 
-[taxonomies]
-    tag = "tags"
-    topic = "topics"
-    category = "categories"
-
-[author]
-    name = "zhoumingjun"
-    email = "zhoumingjun@gmail.com"
-
-[params]
-    # You can use markdown here.
-    BrandImage = "" #top header brand image.
-    brand = "zhoumingjun's blog" # brand image alt text.
-    topline = "this is the personal blog"
-    footline = "code with <i class='fa fa-heart'></i>"
-
-    # Show a sidebar menu
-    showRightSidebar = true
-
-    # Text for the top menu link, which goes the root URL for the site.
-    # Default (if omitted) is "Home".
-    home = "home"
-
-    mailmunchid = "" # Mailmunch site id
-    sumomeid = "" # Sumome id
-
-    # Select a syntax highight.
-    # Check the static/css/highlight directory for options.
-    highlight = "default"
-
-    # Google Analytics.
-    googleAnalytics = "Your Google Analytics tracking code"
-
-    # Sidebar social links.
-    github = "enten/hugo-boilerplate" # Your Github profile ID
-    bitbucket = "" # Your Bitbucket profile ID
-    linkedin = "" # Your LinkedIn profile ID (from public URL)
-    googleplus = "" # Your Google+ profile ID
-    facebook = "" # Your Facebook profile ID
-    twitter = "" # Your Twitter profile ID
-    youtube = ""  # Your Youtube channel ID
-    flattr = ""  # populate with your flattr uid
-
-[params.theme]
-  name = "united"
+# Default language to use (if you setup multilingual support)
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 [blackfriday]
-    angledQuotes = true
-    fractions = false
-    hrefTargetBlank = false
-    latexDashes = true
-    plainIdAnchors = true
-    extensions = []
-    extensionmask = []
+  hrefTargetBlank = true
+
+[params]
+  name = "zhoumingjun"
+  role = ""
+  organization = ""
+  avatar = ""
+  email = ""
+  address = ""
+  office_hours = ""
+  phone = ""
+  skype = ""
+  telegram = ""
+
+  # Enable Keybase in Contact section by entering your keybase.io username.
+  keybase = ""
+
+  # Date format (refer to Go's date format: http://flippinggodateformat.com )
+  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+  date_format = "2006-01-02"
+
+  # Enable global LaTeX math rendering?
+  #   If false, you can enable it locally on a per page basis.
+  math = false
+
+  # Enable native social sharing buttons?
+  sharing = true
+
+  # Link custom CSS and JS assets
+  #   (relative to /static/css and /static/js respectively)
+  custom_css = ["custom.css"]
+  custom_js  = []
+
+  # Publication types.
+  #   Used to categorize publications.
+  #   The index of the publication type in the list is used as its unique numerical identifier.
+  #   The numeric ID is used in a publication's frontmatter to categorize it.
+  #   The language can be edited below.
+  #   For multi-lingual sites, copy this block to each language section at the end of this file.
+  publication_types = [
+    'Uncategorized',  # 0
+    'Conference proceedings',  # 1
+    'Journal',  # 2
+    'Work in progress',  # 3
+    'Technical report',  # 4
+    'Book',  # 5
+    'Book chapter'  # 6
+  ]
+
+  # Social/Academic Networking
+  #
+  # Icon pack "fa" includes the following social network icons:
+  #
+  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
+  #   youtube, instagram, soundcloud
+  #
+  #   For email icon, use "fa" icon pack, "envelope" icon, and
+  #   "mailto:your@email.com" as the link.
+  #
+  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
+  #
+  # Icon pack "ai" includes the following academic network icons:
+  #
+  #   google-scholar, arxiv, orcid, researchgate, mendeley
+  #
+  #   Full list: https://jpswalsh.github.io/academicons/
+
+  [[params.social]]
+    icon = "envelope"
+    icon_pack = "fa"
+    link = "zhoumingjun@gmail.com"
+
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/zhoumingjun"
+
+
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
 
 [[menu.main]]
-name = "home"
-pre = ""
-weight = 1
-identifier = "home"
-url = "/"
+  name = "Home"
+  url = "#intro"
+  weight = 10
 
 [[menu.main]]
-name = "post"
-pre = ""
-weight = 2
-identifier = "Post"
-url = "/post"
+  name = "Projects"
+  url = "#projects"
+  weight = 20
 
 [[menu.main]]
-name = "about"
-pre = ""
-weight = 3
-identifier = "about"
-url = "/about"
+  name = "Posts"
+  url = "#posts"
+  weight = 30
+
+[[menu.main]]
+  name = "About"
+  url = "#about"
+  weight = 40
 
  
+# Taxonomies.
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Languages
+#   Create a [languages.X] block for each language you want, where X is the language ID.
+
+# Configure the English version of the website.
+[languages.en]
+  languageCode = "en-us"
