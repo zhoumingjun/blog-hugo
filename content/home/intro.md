@@ -20,6 +20,6 @@ weight = 10
 <div style="height: 5px;"></div>
 
 {{% jumbotron %}}
-[devenv](https://zhoumingjun.github.io/devenv): daily development environment
+[devenv](https://zhoumingjun.github.io/devenv)
 
 {{% /jumbotron %}}
