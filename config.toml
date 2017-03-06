@@ -15,6 +15,9 @@ googleAnalytics = ""
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+    
 [blackfriday]
   hrefTargetBlank = true
 
