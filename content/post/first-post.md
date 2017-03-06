@@ -10,8 +10,9 @@ title = "first-post"
   caption = ""
 
 +++
-
-This  website is powered by [Academic](https://github.com/gcushen/hugo-academic), [Hugo](https://gohugo.io), and [GitHub Pages](https://github.com/), and many thanks to all these tools.
-
 I build this site to boost my daily work. 
+
+This website is powered by [Academic](https://github.com/gcushen/hugo-academic), [Hugo](https://gohugo.io), and [GitHub Pages](https://github.com/).   
+
+
 

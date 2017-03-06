@@ -4,7 +4,7 @@ external_link = "https://zhoumingjun.github.io/devenv"
 highlight = true
 image_preview = ""
 math = false
-summary = "daily development environment"
+summary = "development environment configurations"
 tags = []
 title = "devenv"
 
