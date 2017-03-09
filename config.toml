@@ -5,15 +5,17 @@ theme = "hugo-theme-minos"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 
+
+
+# Default language to use (if you setup multilingual support)
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
 # Enable comments by entering your Disqus shortname
 disqusShortname = "zhoumingjun"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-93100853-1"
-
-# Default language to use (if you setup multilingual support)
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
@@ -22,6 +24,8 @@ defaultContentLanguageInSubdir = false
   hrefTargetBlank = true
 
 [params]
+
+  smartToc = true
   name = "zhoumingjun"
   role = ""
   organization = ""

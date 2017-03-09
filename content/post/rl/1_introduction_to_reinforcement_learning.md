@@ -5,7 +5,6 @@ tags = ["ml", "rl"]
 categories = ["learning"]
 highlight = true
 math = true
-toc=true
 
 [header]
   caption = ""
@@ -13,9 +12,9 @@ toc=true
 
 +++
 
-## About Reinforcement Learning
+## About Reinforcement Learning  
 
-What makes reinforcement learning di↵erent from other machine learning paradigms?
+What makes reinforcement learning different from other machine learning paradigms?   
 
 - There is no supervisor, only a reward signal
 - Feedback is delayed, not instantaneous
