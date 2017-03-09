@@ -19,3 +19,59 @@
   background-color: #0288D1;
   color: #fff;
 }
+
+#toc {
+	position: fixed;
+	padding: 0 1rem 1rem 1rem;
+	border-left: 1px solid #eee;
+	font-size: 14px;
+}
+nav#TableOfContents li {
+	padding-bottom: 0.25rem;
+}
+nav#TableOfContents ul:first-child {
+    padding-left: 0px;
+}
+.toc-label {
+	font-size: 0.8rem;
+	color: #aeaeae;
+}
+
+.showcase-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.showcase-container img {
+  border: 1px solid #555;
+}
+
+.showcase-container h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dummy {
+    padding-top: 90%; /* Making rows line up even if img proportions off */
+}
+
+.thumbnail {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media(max-width:1200px) {
+    .toc {
+        display: none;
+    }
+}
+
+
+code.has-jax {font: inherit;
+              font-size: 100%;
+              background: inherit;
+              border: inherit;
+              color: #515151;}

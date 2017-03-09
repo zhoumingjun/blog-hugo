@@ -1,7 +1,7 @@
 baseurl = "https://zhoumingjun.github.io"
 title = "zhoumingjun's blog"
 copyright = "&copy; 2017 zhoumingjun"
-theme = "hugo-academic"
+theme = "hugo-theme-minos"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 
@@ -50,7 +50,7 @@ defaultContentLanguageInSubdir = false
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   custom_css = ["custom.css"]
-  custom_js  = []
+  custom_js  = [ ]
 
   # Publication types.
   #   Used to categorize publications.
@@ -104,22 +104,22 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Home"
-  url = "#intro"
+  url = "/"
   weight = 10
 
 [[menu.main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 20
-
-[[menu.main]]
   name = "Posts"
-  url = "#posts"
+  url = "/post"
   weight = 30
 
 [[menu.main]]
+  name = "Projects"
+  url = "/project"
+  weight = 20
+
+[[menu.main]]
   name = "About"
-  url = "#about"
+  url = "/about"
   weight = 40
 
  
