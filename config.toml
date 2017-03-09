@@ -1,4 +1,4 @@
-baseurl = "https://zhoumingjun.github.io"
+baseurl = "https://zhoumingjun.github.io/"
 title = "zhoumingjun's blog"
 copyright = "&copy; 2017 zhoumingjun"
 theme = "hugo-theme-minos"
