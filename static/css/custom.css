@@ -72,6 +72,6 @@ nav#TableOfContents ul:first-child {
 
 code.has-jax {font: inherit;
               font-size: 100%;
-              background: inherit;
+              background: white;
               border: inherit;
               color: #515151;}
