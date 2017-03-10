@@ -1,13 +1,10 @@
 +++
-date = "2017-03-09T11:26:55+08:00"
 title = "2 Markov Decision Processes"
-menu = ""
-tags = ["ml", "rl"]
+date = "2017-03-09T11:26:55+08:00"
 series = ["reinforcement learning"]
-Description = "markov processes"
+tags = ["ml","rl"]
 math = true
 viz = true
-
 +++
 
 # Key points
@@ -17,7 +14,6 @@ This describe the relation between state and action.
     - `$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $`
     - `$ q_\pi(s,a) = \mathcal{R}_s^a + \gamma \sum_{s' \in \mathcal{S}} \mathcal{P}_{ss'}^a v_\pi(s') $`
   
-
 ```viz-dot
 digraph g { 
    node[shape="circle" , label="", width=0.2, height=0.2]
@@ -34,6 +30,7 @@ digraph g {
    l22 -> l34
 }
 ```
+
 - Bellman equation
 Bellman equation is the key to the MDP, and it describe the relation of the elements in MDP  `$ <\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma> $`       
 `$ v_\pi = \mathcal{R}_\pi + \gamma \mathcal{P}_\pi v  $`       
@@ -57,15 +54,12 @@ Then we get the following optimal policy
 
 # Lecture content   
 ## Markov Processes
- 
 A state `$S_t$` is Markov if and only if `$ \mathbb{P}[S_{t+1} | s_t] = \mathbb{P}[S_{t+1}|S_1, ... , S_t] $`   
 A Markov Process (or Markov Chain) is a tuple `$ <\mathcal{S}, \mathcal{P}> $`
 
 - `$\mathcal{S}$` is a (finite) set of states
 - `$\mathcal{P}$` is a state transition probability matrix  
   `$ \mathcal{P} = \mathbb{P}[S_{t+1} = s' | S_t = s] $`
-
-
  
 ## Markov Reward Processes
 ### definition
@@ -182,6 +176,7 @@ q_\pi(s,a) &= \mathcal{R}_s^a + \gamma \sum_{s' \in \mathcal{S}} \mathcal{P}_{ss
            &= \mathcal{R}_s^a + \gamma \sum_{s' \in \mathcal{S}} \mathcal{P}_{ss'}^a \sum_{a \in \mathcal{A}} \pi(a'|s') q_\pi(s',a')
 \end{align*}
 $` 
+
 ### Bellman Equation in Matrix Form  
 `$ 
 \begin{align*}
@@ -191,7 +186,6 @@ v_\pi &= (1-\gamma\mathcal{P}_\pi)^{-1}\mathcal{R}_\pi
 $`    
 
 ### Optimal Value Function
-
 #### definition
 The optimal state-value function `$ v_*(s)$` is the maximum value function over all policies    
 `$ v_*(s)=\max\limits_{\pi}v_{\pi}(s) $`    
@@ -245,4 +239,3 @@ $`
 
 ## Extensions to MDPs
 ...
-

@@ -1,15 +1,13 @@
 +++
-date = "2017-03-7T11:19:01+08:00"
 title = "0 Preface"
-menu = ""
-tags = ["ml", "rl"]
+date = "2017-03-07T16:34:01+08:00"
 series = ["reinforcement learning"]
-Description = ""
-
+tags = ["ml","rl"]
 +++
 
 # Introduction
-This is a series about reinforcement learning   
+This is a series of reinforcement learning materials
 
+- book: [Reinforcement Learning: An Introduction (2nd Edition)](https://webdocs.cs.ualberta.ca/~sutton/book/bookdraft2016sep.pdf)
 - lectures: [David Silver's Reinforcement Learning Course](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html) 
 - exercises: [Reinforcement learning](https://github.com/dennybritz/reinforcement-learning)

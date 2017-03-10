@@ -74,6 +74,7 @@ viz = true
         var image = new DOMParser().parseFromString(Viz(x.innerText, {format:"svg", engine:engine}), "image/svg+xml");
         x.parentNode.insertBefore(image.documentElement, x);
         x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "white"
     });
 })();
 </script>

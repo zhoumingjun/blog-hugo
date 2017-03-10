@@ -136,7 +136,7 @@ googleAnalytics = "UA-93100853-1"
 [taxonomies]
   tag = "tags"
   category = "categories"
-  series = "serieses"
+  series = "series"
 
 # Languages
 #   Create a [languages.X] block for each language you want, where X is the language ID.
