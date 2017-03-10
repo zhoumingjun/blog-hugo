@@ -1,8 +1,8 @@
 +++
-date = "2017-03-07T16:34:01+08:00"
+date = "2017-03-08T16:34:01+08:00"
 title = "1 Introduction to Reinforcement Learning"
 tags = ["ml", "rl"]
-categories = ["learning"]
+series = ["reinforcement learning"]
 highlight = true
 math = true
 

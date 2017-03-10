@@ -114,23 +114,29 @@ googleAnalytics = "UA-93100853-1"
 [[menu.main]]
   name = "Posts"
   url = "/post"
+  weight = 20
+
+[[menu.main]]
+  name = "Notes"
+  url = "/note"
   weight = 30
 
 [[menu.main]]
   name = "Projects"
   url = "/project"
-  weight = 20
+  weight = 40
 
 [[menu.main]]
   name = "About"
   url = "/about"
-  weight = 40
+  weight = 50
 
  
 # Taxonomies.
 [taxonomies]
   tag = "tags"
   category = "categories"
+  series = "serieses"
 
 # Languages
 #   Create a [languages.X] block for each language you want, where X is the language ID.
