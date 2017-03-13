@@ -10,8 +10,9 @@ viz = true
 # Key Points
 Dynamic programming assumes full knowledge of the MDP
 
-1. given MDP and policy `$\pi$`, compute the state value `$v_\pi$`  
-    just follow the bellmen equation , and compute value of each state iteratively   
+**value evaluation**        
+given MDP and policy `$\pi$`, compute the state value `$v_\pi$`  
+just follows the bellmen equation , and compute value of each state iteratively   
 `$
 \begin{align*}
 v_{k+1}(s)  &= \sum_{a \in \mathcal{A}} \pi(a|s)  (\mathcal{R}_s^a + \gamma \sum_{s' \in \mathcal{S}} \mathcal{P}_{ss'}^a v_k(s') ) \\
@@ -19,16 +20,23 @@ v_{k+1} &= \mathcal{R}^\pi + \gamma \mathcal{P}^\pi v_k
 \end{align*}
 $`   
 
-2. given MDP, compute the optimal policy `$\pi_*$`           
-2.1 Policy iteration       
-Policy iteration try to find the optimal policy `$\pi_*$` by improving the current policy `$\pi$` step-by-step
-The key is greedy algorithm, that is  
-`$ \pi'(s) = \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_\pi(s,a))$`
+**policy optimality**       
+given MDP, compute the optimal policy `$\pi_*$`           
 
-2.2 Value iteration             
-Value iteration try to find the optimal policy `$\pi_*$` by the known solutions to the sub problems     
-It is different to the policy iteration, and there is no explicit policy
- 
+- Policy iteration       
+Policy iteration try to find the optimal policy `$\pi_*$` by improving the current policy `$\pi$` step-by-step      
+The key is greedy algorithm     
+`$ \pi'(s) = \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_\pi(s,a))$`      
+
+- Value iteration             
+Value iteration try to find the optimal policy `$\pi_*$` by the known solutions to the sub problems                     
+It is different to the policy iteration, and there is no explicit policy     
+The key is compute state value from all the successor states(the known solution of the subproblem)          
+`$ 
+\begin{align*} v_{k+1}(s) &= \max\limits_{a \in \mathcal{A}} (\mathcal{R}_s^a + \gamma\sum_{s' \in \mathcal{S}} \mathcal{P}_{ss'}^a v_*(s') ) \\
+                  v_{k+1} &= \max\limits_{a \in \mathcal{A}} (\mathcal{R}^a + \gamma\mathcal{P}^av_k) 
+\end{align*} 
+$`
 # Lecture
 ## Introduction
 Dynamic Programming is a very general solution method forproblems which have two properties:
@@ -232,7 +240,7 @@ def greedy(env, policy, V, discount_factor=1.0):
     return   policy , policy_stable
 ```        
 
-# value iteration
+## value iteration
 The key is one_step_lookahead, that is compute the max value of the state from all the successor states
 
 `$ 
