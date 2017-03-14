@@ -8,9 +8,30 @@ viz = true
 +++
 
 # Key Points
+**Return**      
+`$
+\begin{align*}
+V_\pi(s) &= \mathbb{E}_\pi\left \{ \sum_{k=0}^\infty \gamma_k R_{t+k+1} | s_t = s\right \}                      &  \color{red}  {Definition} \\
+         &= \mathbb{E}_\pi\left \{  R_{t+1} + \gamma \sum_{k=0}^\infty \gamma_k R_{t+k+2} | s_t = s\right \}    &  \color{red}  {Unfolding} \\
+         &= \mathbb{E}_\pi\left \{  R_{t+1} + \gamma G_{t+1} | s_t = s\right \}                                 &  \color{red}  {Recursive \ formula} 
+\end{align*}
+$`
 
-# Lecture content
+**Value function**           
+`$
+\begin{align*}
+V_\pi(s) &= \mathbb{E}_\pi \left \{ {G_t | s_t = s} \right \}                                                   &  \color{red} {MC} \\
+         &= \mathbb{E}_\pi\left \{  R_{t+1} + \gamma V_\pi(s_{t+1}) | s_t = s\right \}                          &  \color{red} {TD(0)} \\
+         &= \sum_a\pi(s,a)\sum_{s'}\mathbb{P}_{ss'}^a [R_{ss'}^a + \gamma V_\pi(s')]                            &  \color{red} {DP}
+\end{align*}
+$`
 
+MC Backup: `$ V(S_t) \leftarrow V(S_t) + \alpha(G_t-V(S_t))$`       
+TD Backup: `$ V(S_t) \leftarrow V(S_t) + \alpha(R_{t+1} + \gamma V(S_{t+1})-V(S_t))$`            
+DP Backup: `$ V(S_t) \leftarrow \mathbb{E}_\pi[ R_{t+1} + \gamma V(S_{t+1})] $`
+
+# Lecture Notes
+[some reading]https://www.tu-chemnitz.de/informatik/KI/scripts/ws0910/ml09_6.pdf
 ## introduction
 **Model-free prediction**           
 Estimate the value function of an _unknown_ MDP

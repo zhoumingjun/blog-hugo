@@ -52,7 +52,7 @@ Then we get the following optimal policy
     - state-value function: `$ v_*(s) = \max\limits_a R_s^a + \gamma\sum_{s' \in \mathcal{S}} \mathcal{P}_{ss'}^a v_*(s') $`
     - action-value function: `$ q_*(s,a) = R_s^a + \gamma\sum_{s' \in \mathcal{S}} \mathcal{P}_{ss'}^a \max\limits_a' q_*(s',a') $`  
 
-# Lecture content   
+# Lecture Notes   
 ## Markov Processes
 A state `$S_t$` is Markov if and only if `$ \mathbb{P}[S_{t+1} | s_t] = \mathbb{P}[S_{t+1}|S_1, ... , S_t] $`   
 A Markov Process (or Markov Chain) is a tuple `$ <\mathcal{S}, \mathcal{P}> $`

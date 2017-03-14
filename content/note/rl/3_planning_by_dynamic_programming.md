@@ -37,7 +37,8 @@ The key is compute state value from all the successor states(the known solution 
                   v_{k+1} &= \max\limits_{a \in \mathcal{A}} (\mathcal{R}^a + \gamma\mathcal{P}^av_k) 
 \end{align*} 
 $`
-# Lecture
+
+# Lecture 
 ## Introduction
 Dynamic Programming is a very general solution method forproblems which have two properties:
 
