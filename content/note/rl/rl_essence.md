@@ -6,6 +6,7 @@ tags = ["ml","rl"]
 math = true
 viz = true
 +++
+
 # Definition
 - MDP               
 A Markov decision process (MDP) is a Markov reward process with decisions.  

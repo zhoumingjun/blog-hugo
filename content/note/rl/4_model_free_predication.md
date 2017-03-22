@@ -50,7 +50,7 @@ Estimate the value function of an _unknown_ MDP
 - Goal: learn `$v_\pi$` from episodes of experience under policy `$\pi$`            
     `$ S_1, A_1, R_2, \dots, S_k \sim \pi $`
 - Recall that the return is the total discounted reward:            
-    `$ G_t = R_{t+1} +  R_{t+2} + ... = \sum_{k=0} ^\infty \gamma^kR_{t+k+1} $`     
+    `$ G_t = R_{t+1} +  \gammaR_{t+2} + ... = \sum_{k=0} ^\infty \gamma^kR_{t+k+1} $`     
 - Recall that the value function is the expected return:            
     `$  v(s) = \mathbb{E}[G_t | S_t =s] $`    
 - Monte-Carlo policy evaluation uses **empirical mean return** instead of expected return        
