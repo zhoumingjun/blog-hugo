@@ -21,10 +21,11 @@ description = ""
 
 topology:
 
-DIP: 192.168.2.172
-RIP[1]: 192.168.2.173
-RIP[2]: 192.168.2.174
-VIP: 192.168.2.175 
+- DIP: 192.168.2.172            
+- RIP[1]: 192.168.2.173         
+- RIP[2]: 192.168.2.174     
+- VIP: 192.168.2.175            
+
 ## lvs only
 director side 
 ```
@@ -59,38 +60,38 @@ echo "1" > /proc/sys/net/ipv4/conf/all/arp_ignore
 echo "2" > /proc/sys/net/ipv4/conf/all/arp_announce
 ```
 
-# lvs + keepalived
+## lvs + keepalived
 director side 
 
 ```
-global_defs {               ##全局配置部分
-    router_id LVS_MASTER       ##运行keepalived机器的一个标识
+global_defs {              
+    router_id LVS_MASTER   
 }
-vrrp_instance VI_1 {       ##设置vrrp组，唯一且同一LVS服务器组要相同
-    state MASTER               ##备份LVS服务器设置为BACKUP
-    interface em1             # #设置对外服务的接口
-    virtual_router_id 51       ##设置虚拟路由标识
-    priority 100               #设置优先级，数值越大，优先级越高，backup设置小于100，当master宕机后自动将backup高的变为master。
-    advert_int 1               ##设置同步时间间隔
-    authentication {           ##设置验证类型和密码，master和buckup一定要设置一样
+vrrp_instance VI_1 {       
+    state MASTER           
+    interface em1          
+    virtual_router_id 51   
+    priority 100           
+    advert_int 1           
+    authentication {       
     auth_type PASS
     auth_pass 1111
     }
-virtual_ipaddress {        ##设置VIP，可以多个，每个占一行
+virtual_ipaddress {        
     192.168.2.175
     }
 }
 virtual_server 192.168.2.175 80 {
-    delay_loop 6               ##健康检查时间间隔，单位s
-    lb_algo wrr                ##负载均衡调度算法设置为加权轮叫
-    lb_kind DR                 ##负载均衡转发规则
-    nat_mask 255.255.255.0     ##网络掩码，DR模式要保障真是服务器和lvs在同一网段
-    #persistence_timeout 5     ##会话保持时间，单位s
-    protocol TCP               ##协议
-    real_server 192.168.2.173 80 {      ##真实服务器配置，80表示端口
-        weight 3                   ##权重
-        TCP_CHECK {                ##服务器检测方式设置
-        connect_timeout 5          ##连接超时时间
+    delay_loop 6            
+    lb_algo wrr             
+    lb_kind DR              
+    nat_mask 255.255.255.0  
+    #persistence_timeout 5  
+    protocol TCP            
+    real_server 192.168.2.173 80 {      
+        weight 3                   
+        TCP_CHECK {               
+        connect_timeout 5        
         nb_get_retry 3
         delay_before_retry 3
         connect_port 80
